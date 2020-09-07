@@ -7,3 +7,4 @@ Given tasks for the role.
 How I did it: du -ah | grep -v "/$" | sort -h | tail -7. 
 I used tail -7 to stop with 7 files as the command du gave a list of long files.
 P.S: I executed directly in terminal. I forgot to save it as a Shell file and execute.
+![executed in Zsh](http://url/to/img.png)
