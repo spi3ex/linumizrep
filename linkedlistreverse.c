@@ -43,12 +43,12 @@ int main()
 	Node* head = newNode(""); 
 
 
-	cout << "List before reverse: \n"; 
+	printf("List before reverse: \n"); 
 	printList(head); 
 
 	reverse(head); 
 
-	cout << "\n\nList after reverse: \n"; 
+	printf("\n\nList after reverse: \n"); 
 	printList(head); 
 
 	return 0; 
