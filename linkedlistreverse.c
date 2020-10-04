@@ -52,14 +52,14 @@ void Linklist(Node *ref,int input)
 
 void LinkedReverse(Node head)
 {
-    Node prev = NULL;
-    Node current = head;
-    Node next = NULL;
+    Node prev = NULL; //empty node
+    Node current = head; // pointed to head
+    Node next = NULL; //empty
     while (current != NULL) {
-        next = current->next;
-        current->next = prev;
-        prev = current;
-        current = next;
+        next = current->next; //IN LOOP: next =next ndoe
+        current->next = prev; // previous node = next node
+        prev = current;       //copied Current node as next node
+        current = next;       //copied next node to Current so that the sequence changes
     }
     head = prev;
     Node temp;
