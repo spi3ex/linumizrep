@@ -22,7 +22,7 @@ I used tail -7 to stop with 7 files as the command du gave a list of long files.
 ![executed in Zsh](https://github.com/spi3ex/linumizrep/blob/master/Screenshot%202020-09-07%20at%209.47.09%20PM.png)
 Analysis of the Problem:
 - Finding all executable files
-- print their size 
+- print their size in order
 - Find Recursively (folders and sub folders)
 Reference:
 1. StackOverflow
