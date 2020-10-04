@@ -2,7 +2,7 @@
 Given tasks for the role in Linumiz for the first round of the Interview Process.
 ## 1. Write a program which takes your/any name/string as command line argument and stores each character in a singly linked list node and prints it in reverse (from tail to head).
 > This Program is Compiled using gcc POSIX Compliant Compiler so it will work on Linux without modifications. For windows it might require additional libraries.  
-![executed in gcc-POSIX Compatible](https://github.com/spi3ex/linumizrep/blob/master/Screenshot%202020-10-04%20at%201.34.02%20PM.png)
+![executed in gcc-POSIX Compatible](https://github.com/spi3ex/linumizrep/blob/master/Screenshot%202020-10-04%20at%207.01.55%20PM.png)
 
 
 ###Problem Analysis:
