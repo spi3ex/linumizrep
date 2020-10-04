@@ -1,15 +1,14 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <stdio.h> //standard io header
+#include <stdlib.h> //contains data structure headers in C
+#include <string.h> // for string Operations
 
 struct node{
     char data;
     struct node* next;
-};
-typedef struct node *Node;
-Node head= NULL;
+}; //initialized node
+typedef struct node *Node; // used typedef to define a more readable coee
 
-int main(int argc,char *argv[])
+int main(int argc,char *argv[]) //get arguments from the commandline
 {
     char *text;
     text=argv[1];
