@@ -10,6 +10,8 @@ Given tasks for the role in Linumiz for the first round of the Interview Process
 - The arguments must be Provided through Commandline
 - Reverse the linked list using Pointers
 
+![Tested in gcc in Debian Ubuntu 20.04 LTS](https://github.com/spi3ex/linumizrep/blob/master/Screenshot%20from%202020-10-04%2019-23-00.png)
+
 References: 
 1. Book: Data Structures in C
 2. Web: GeeksforGeeks.org, codeforwin.org, github.com
