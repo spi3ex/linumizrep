@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct node {
+struct node{
     char data;
     struct node* next;
-}*head;
+};
 typedef struct node *Node;
-head= (Node*) malloc(sizeof(struct node));
+Node head= NULL;
 
-int main(int argc,char argv[])
+int main(int argc,char *argv[])
 {
     char *text;
     text=argv[1];
@@ -17,38 +17,39 @@ int main(int argc,char argv[])
 
     for (int i=0;i<strlen(text);i++)
     {
-        CreateList(&head, text[i]);
+        CreateNode(text[i]);
     }
-    ReverseList(head);
+    ReverseNode(head);
     return 0;
 }
 
 
-void CreateList(Node *head, int input)
+void CreateNode(int input)
 {
-    Node *NewNode,*temp;
+    Node *NewNode;
+    Node *temp;
     NewNode= (Node*) malloc(sizeof(struct node));
 
-    temp = head;
+   
     NewNode->data = input;
     NewNode->next = NULL;
 
-    if (head == NULL)
+    if (*head == NULL)
     {
-       head = NewNode;
+       *head = NewNode;
        return;
     }
-
-    while (temp->next != NULL)
+    temp = head;
+    while (temp->next != NULL){
         temp = temp->next;
-
+    }
     temp->next = NewNode;
     return;
 }
 
 
 
-void ReverseList(head)
+void ReverseNode(head)
 {
     Node* prev = NULL;
     Node* current = *head;
@@ -68,5 +69,3 @@ void ReverseList(head)
 	}
 	printf("%c",temp->data);
 }
-
-
