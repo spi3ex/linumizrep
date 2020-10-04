@@ -1,7 +1,7 @@
 # linumizrep
 Given tasks for the role.
 ## 1. Write a program which takes your/any name/string as command line argument and stores each character in a singly linked list node and prints it in reverse (from tail to head).
-
+![executed in gcc-POSIX Compatible]
 
 ## 2. Write a shell script to find all the ELF file in a directory (recursively) and print their sizes in ascending order. Note: This is not the file with extension .elf, but the ELF file itself.
 How I did it: `du -ah | grep -v "/$" | sort -h | tail -7. `
