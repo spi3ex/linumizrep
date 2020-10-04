@@ -4,7 +4,7 @@ Given tasks for the role.
 > This Program is Compiled using gcc POSIX Compliant Compiler so it will work on Linux without modifications. For windows it might require additional libraries.  
 ![executed in gcc-POSIX Compatible](https://github.com/spi3ex/linumizrep/blob/master/Screenshot%202020-10-04%20at%201.34.02%20PM.png)
 ###Problem Analysis:
-- To Create a Linked List that Can Store ASCII Characters
+- To Create a Linked List that Can Store any String (ASCII Characters)
 - The arguments must be Provided through Commandline
 - Reverse the linked list using Pointers
 References: 
