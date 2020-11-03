@@ -3,7 +3,7 @@
 #include <string.h> // for string Operations
 
 struct node{
-    char data;
+    volatile char data;
     struct node* next;
 }; //initialized node
 typedef struct node *Node; // used typedef to define a more readable coee
