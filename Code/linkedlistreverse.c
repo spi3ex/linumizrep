@@ -1,35 +1,23 @@
-#include <stdio.h> //standard io header
-#include <stdlib.h> //contains data structure headers in C
-#include <string.h> // for string Operations
+/* This Program was tested on UNIX using POSIX Compiler
+*  ADD_LIST(<head>,<input>) is Used to Create any Number of Nodes from the Head Node 
+*  REVERSE_LIST(Node *head) Prints the list from tail to head
+*/
+
+#include <stdio.h> 
+#include <stdlib.h> 
+#include <string.h> 
 
 struct node{
-    volatile char data;
+    char data;
     struct node* next;
-}; //initialized node
-typedef struct node *Node; // used typedef to define a more readable coee
+};
+typedef struct node Node; 
 
-void Linklist(Node *ref,int input);
-void LinkedReverse(Node head);
-int main(int argc,char *argv[]) //get arguments from the commandline
+void ADD_LIST(Node **ref,int input) //ref is the Pointer to the head node, input is the Character of the string
 {
-	Node head;
-	head = NULL; //Creating head node
-	head = (Node)malloc(sizeof(struct node));
-    char *text; //text stores the string
-    text=argv[1]; //Commandline arguments passed to text
-
-    for (int i=0;i<strlen(text);i++)
-    {
-        Linklist(&head,text[i]); //Creating node for each string
-    }
-    LinkedReverse(head);
-    return 0;
-}
-void Linklist(Node *ref,int input)
-{
-    Node NewNode;
-    Node temp;
-    NewNode= (Node) malloc(sizeof(struct node));
+    Node *NewNode; 
+    Node *temp;
+    NewNode= (Node*) malloc(sizeof(struct node));
 
     NewNode->data = input;
     NewNode->next = NULL;
@@ -47,26 +35,24 @@ void Linklist(Node *ref,int input)
     NewNode->next = NULL;
     return;
 }
-
-
-
-void LinkedReverse(Node head)
+void REVERSE_LIST(Node *head) 
+{   
+    if (head == NULL) 
+       return; 
+    REVERSE_LIST(head->next); //Recursive function to print from tail
+    printf("%c", head->data); 
+} 
+int main(int argc,char *argv[])
 {
-    Node prev = NULL; //empty node
-    Node current = head; // pointed to head
-    Node next = NULL; //empty
-    while (current != NULL) {
-        next = current->next; //IN LOOP: next =next ndoe
-        current->next = prev; // previous node = next node
-        prev = current;       //copied Current node as next node
-        current = next;       //copied next node to Current so that the sequence changes
+	Node *head = NULL; 
+    head = (Node*)malloc(sizeof(struct node));
+    char *text;
+    text=argv[1];
+    for (int i=0;i<strlen(text);i++)
+    {
+        ADD_LIST(&head,text[i]);
     }
-    head = prev;
-    Node temp;
-    temp = head;
-    while(temp->next != NULL){
-		printf("%c",temp->data);
-		temp = temp->next;
-	}
-	printf("%c",temp->data);
+    REVERSE_LIST(head);
+    free(head);
+    return 0;
 }
